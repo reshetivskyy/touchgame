@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block title %}TITLE{% endblock %} {% block content
+%}
+<section class="top">
+    <div class="container">
+        <div class="top__inner">
+            <div class="tabs">
+                <ul class="tabs__btns">
+                    <li>
+                        <a href="#tabs-1" class="tabs__link"
+                            ><img
+                                src="{{ url_for('static', filename='img/scoretabs/easy_active.png') }}"
+                                data-normal="{{ url_for('static', filename='img/scoretabs/easy.png') }}"
+                                data-active="{{ url_for('static', filename='img/scoretabs/easy_active.png') }}"
+                                alt="easybtn"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#tabs-2" class="tabs__link"
+                            ><img
+                                src="{{ url_for('static', filename='img/scoretabs/medium.png') }}"
+                                data-normal="{{ url_for('static', filename='img/scoretabs/medium.png') }}"
+                                data-active="{{ url_for('static', filename='img/scoretabs/medium_active.png') }}"
+                                alt="easybtn"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#tabs-3" class="tabs__link"
+                            ><img
+                                src="{{ url_for('static', filename='img/scoretabs/hard.png') }}"
+                                data-normal="{{ url_for('static', filename='img/scoretabs/hard.png') }}"
+                                data-active="{{ url_for('static', filename='img/scoretabs/hard_active.png') }}"
+                                alt="easybtn"
+                        /></a>
+                    </li>
+                </ul>
+                <div id="tabs-1" class="tabs__item">
+                    <div class="score">
+                        <p class="score__user">user1337</p>
+                        <p class="score__count">11</p>
+                    </div>
+                </div>
+                <div id="tabs-2" class="tabs__item"></div>
+                <div id="tabs-3" class="tabs__item"></div>
+                <a href="{{ url_for('index') }}" class="back">
+                    <img
+                        src="{{ url_for('static', filename='img/back.png') }}"
+                        alt="back"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

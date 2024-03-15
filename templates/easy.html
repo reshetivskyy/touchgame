@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}TITLE{% endblock %} {% block content
+%}
+<section class="game-box">
+    <div class="container">
+        <div class="game-box__inner">
+            <p class="game-box__score" id="score">0</p>
+
+            <div class="game easy-lvl">
+                <button class="game__btn" data-index="1">
+                    <img
+                        src="{{ url_for('static', filename='img/game/easy/easy_btn.png') }}"
+                        data-normal="{{ url_for('static', filename='img/game/easy/easy_btn.png') }}"
+                        data-green="{{ url_for('static', filename='img/game/easy/easy_greenbtn.png') }}"
+                        data-red="{{ url_for('static', filename='img/game/easy/easy_redbtn.png') }}"
+                        alt="gamebtn"
+                    />
+                </button>
+                <button class="game__btn" data-index="2">
+                    <img
+                        src="{{ url_for('static', filename='img/game/easy/easy_btn.png') }}"
+                        data-normal="{{ url_for('static', filename='img/game/easy/easy_btn.png') }}"
+                        data-green="{{ url_for('static', filename='img/game/easy/easy_greenbtn.png') }}"
+                        data-red="{{ url_for('static', filename='img/game/easy/easy_redbtn.png') }}"
+                        alt="gamebtn"
+                        style="rotate: 180deg"
+                    />
+                </button>
+            </div>
+
+            <p class="game-box__timer" id="timer">00:10</p>
+        </div>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+
+{% endblock %}

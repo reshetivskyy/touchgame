@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title %}TITLE{% endblock %} {% block content
+%}
+<section class="again">
+    <div class="container">
+        <div class="again__inner">
+            <div class="again__score">
+                <p class="again__text">{{ score }}</p>
+                <p class="again__text">4</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="again__btn">
+                <img src="{{ url_for('static', filename='img/again/again_btn.png') }}" alt="button" />
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

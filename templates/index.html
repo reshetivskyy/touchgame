@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block title %}TITLE{% endblock %} {% block
+content%}
+<section class="home">
+    <div class="container">
+        <div class="home__inner">
+            <img
+                src="{{ url_for('static', filename='img/logo.svg') }}"
+                alt="logo"
+                class="logo"
+            />
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="{{ url_for('easy') }}" class="nav__link"
+                        ><img
+                            src="{{ url_for('static', filename='img/menu/easy.svg') }}"
+                            alt="btn_img"
+                    /></a>
+                </li>
+                <li class="nav__item">
+                    <a href="{{ url_for('medium') }}" class="nav__link"
+                        ><img
+                            src="{{ url_for('static', filename='img/menu/medium.svg') }}"
+                            alt="btn_img"
+                    /></a>
+                </li>
+                <li class="nav__item">
+                    <a href="{{ url_for('hard') }}" class="nav__link"
+                        ><img
+                            src="{{ url_for('static', filename='img/menu/hard.svg') }}"
+                            alt="btn_img"
+                    /></a>
+                </li>
+                <li class="nav__item">
+                    <a href="{{ url_for('top') }}" class="nav__link"
+                        ><img
+                            src="{{ url_for('static', filename='img/menu/top.svg') }}"
+                            alt="btn_img"
+                    /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

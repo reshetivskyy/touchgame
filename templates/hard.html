@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block title %}TITLE{% endblock %} {% block content
+%}
+<section class="game-box">
+    <div class="container">
+        <div class="game-box__inner">
+            <p class="game-box__score" id="score">0</p>
+
+            <div class="game hard-lvl">
+                <div class="game__block">
+                    <button class="game__btn" data-index="1">
+                        <img
+                            src="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-normal="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-green="{{ url_for('static', filename='img/game/hard/hard_greenbtn.png') }}"
+                            data-red="{{ url_for('static', filename='img/game/hard/hard_redbtn.png') }}"
+                            alt="gamebtn"
+                        />
+                    </button>
+                    <button class="game__btn" data-index="2">
+                        <img
+                            src="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-normal="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-green="{{ url_for('static', filename='img/game/hard/hard_greenbtn.png') }}"
+                            data-red="{{ url_for('static', filename='img/game/hard/hard_redbtn.png') }}"
+                            alt="gamebtn"
+                            style="transform: scaleX(-1)"
+                        />
+                    </button>
+                </div>
+                <div class="game__block">
+                    <button class="game__btn" data-index="3">
+                        <img
+                            src="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-normal="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-green="{{ url_for('static', filename='img/game/hard/hard_greenbtn.png') }}"
+                            data-red="{{ url_for('static', filename='img/game/hard/hard_redbtn.png') }}"
+                            alt="gamebtn"
+                            style="rotate: 180deg; transform: scaleX(-1)"
+                        />
+                    </button>
+                    <button class="game__btn" data-index="4">
+                        <img
+                            src="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-normal="{{ url_for('static', filename='img/game/hard/hard_btn.png') }}"
+                            data-green="{{ url_for('static', filename='img/game/hard/hard_greenbtn.png') }}"
+                            data-red="{{ url_for('static', filename='img/game/hard/hard_redbtn.png') }}"
+                            alt="gamebtn"
+                            style="rotate: 180deg"
+                        />
+                    </button>
+                </div>
+            </div>
+
+            <p class="game-box__timer" id="timer">00:10</p>
+        </div>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}
